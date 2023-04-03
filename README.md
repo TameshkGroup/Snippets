@@ -4,3 +4,5 @@
 - [Linux Tricks](./Linux/README.md)
 - **Dev**
   - [GoLang](./go-lang)
+   - [JavaScript](./JavaScript)
+
