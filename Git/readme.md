@@ -46,3 +46,6 @@ git push --mirror --force
 Install [GitZip for github](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn) chrome extension
 
 Then check the checkbox besite any directory you want to download then click the bottom right download button. 
+
+## missing commits after rebase
+[lihautan website] https://lihautan.com/commit-went-missing-after-rebase/
