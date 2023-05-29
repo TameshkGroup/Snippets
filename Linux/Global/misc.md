@@ -10,7 +10,7 @@ $ sudo updatedb
 $ locate filename/dirname
 ```
 
-To make `tmux` work with mouse:
+### To make `tmux` work with mouse:
 
 ```
 sudo nano ~/.tmux.conf
