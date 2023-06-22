@@ -6,12 +6,8 @@ yarn init
 ```
 
 2. Install requirements
-
 ```
-yarn global add ts-node
-```
-```
-yarn add typescript @types/node
+yarn add typescript ts-node @types/node
 ```
 3. Add `"type": "module"` to `package.json`
 
@@ -25,3 +21,7 @@ yarn add typescript @types/node
   }
 }
 ```
+5. Run the app with the following command:
+ ```
+ node --experimental-specifier-resolution=node --loader ts-node/esm ./src/app.ts
+ ```
