@@ -37,3 +37,14 @@ options i915 enable_guc=2
 ```
 
 Ref: https://wiki.archlinux.org/title/intel_graphics
+
+
+Intel UHD Graphics 770 / Alder Lake GT1 Linux Graphics Performance
+https://www.phoronix.com/review/uhd-graphics-770
+
+## Full featured CLI system information tool
+Install inxi
+
+```bash
+inxi -G
+```
