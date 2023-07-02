@@ -35,3 +35,5 @@ nano /etc/modprobe.d/i915.conf
 ```bash
 options i915 enable_guc=2
 ```
+
+Ref: https://wiki.archlinux.org/title/intel_graphics
