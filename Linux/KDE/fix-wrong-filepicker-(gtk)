@@ -1,0 +1,6 @@
+Apply this:
+[Visual Studio Code Now Supports KDE File Picker, Tumbleweed Not Working](https://www.reddit.com/r/openSUSE/comments/u0n233/visual_studio_code_now_supports_kde_file_picker/)
+
+Ensure the relevent xdg* packages `xdg-desktop-portal` and `xdg-desktop-portal-kde` are installed.
+
+For all application edit `~/.bash_profile` and add `export GTK_USE_PORTAL=1 code`
