@@ -35,5 +35,18 @@
    - prefix + `Ctrl-r - restore`
 
 
+## How to make mouse work and Copy to Clipboard
+Add the following line to `tmux.conf`:
+```bash
+setw -g mouse on
+set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @yank_selection_mouse 'clipboard'
+```
+
+Hit `prefix + I` to install the plugins:
+Once you want to select and copy the text: Select the text via mouse. Don't release the mouse key and hit `l` to copy the selected text to clipboard.
+
+
+
 
       
