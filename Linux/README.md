@@ -4,6 +4,7 @@
     - [zsh tricks](./Global/zsh.md)
     - [Remote File System](./Global/RemoteFileSystem.md)
     - [Misc](./Global/misc.md)
+    - [Tmux](./tmux.md)
 2. Arch Linux
     - [Tips](./Arch/ArchTips.md)
     - [Pacman Tricks](./Arch/pacman-tricks.md)
