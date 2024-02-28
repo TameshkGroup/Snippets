@@ -104,3 +104,41 @@ sudo systemctl start docker
 ```bash
 sudo rm -rf /var/lib/docker.old
 ```
+
+
+
+
+
+
+
+
+## How to use UFW firewall with Docker containers?
+
+iptables=false in /etc/docker/daemon.json and manually setting up ufw rules
+In this solution, we start with setting up our Docker to the mode where it doesn’t modify iptables rules:
+
+
+```bash
+$ echo "{
+\"iptables\": false
+}" > /etc/docker/daemon.json
+```
+Let’s restart the docker server:
+
+```bash
+$ sudo systemctl restart docker
+```
+After than we need to tweak the default ufw forward policy from dropping connection to accepting them, then force ufw to reload the rules, this allows the connections from external interfaces to pass the internal one: 
+
+```bash
+$ sudo sed -i -e 's/DEFAULT_FORWARD_POLICY="DROP"/DEFAULT_FORWARD_POLICY="ACCEPT"/g' /etc/default/ufw
+$ sudo ufw reload
+```
+Finally we need to add a rule to the iptable that will pass the connection to the docker network. Given that the docker network is on 172.17.0.0/16 space:
+
+```bash
+$ iptables -t nat -A POSTROUTING ! -o docker0 -s 172.17.0.0/16 -j MASQUERADE
+```
+This means that connections coming to the network interface will be passed via ufw to the docker network 172.17.0.0/16, and now ufw can control the traffic to that network. A lot of manual work
+
+[source](https://blog.jarrousse.org/2023/03/18/how-to-use-ufw-firewall-with-docker-containers/)
