@@ -142,3 +142,14 @@ $ iptables -t nat -A POSTROUTING ! -o docker0 -s 172.17.0.0/16 -j MASQUERADE
 This means that connections coming to the network interface will be passed via ufw to the docker network 172.17.0.0/16, and now ufw can control the traffic to that network. A lot of manual work
 
 [source](https://blog.jarrousse.org/2023/03/18/how-to-use-ufw-firewall-with-docker-containers/)
+
+
+## Docker: How to clear the logs properly for a Docker container?
+Use:
+```bash
+truncate -s 0 /var/lib/docker/containers/**/*-json.log
+```
+You may need sudo
+```bash
+sudo sh -c "truncate -s 0 /var/lib/docker/containers/**/*-json.log"
+```
