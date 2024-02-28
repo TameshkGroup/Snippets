@@ -18,3 +18,8 @@ sudo pacman -R $(pacman -Qdtq)
 ```bash
 pacman-key --populate archlinux
 ```
+##### Another solution that may work:
+
+```bash
+pacman -Sy archlinux-keyring && pacman -Su
+```
