@@ -46,7 +46,14 @@ sudo pacman -S appmenu-gtk-module libappindicator-gtk3 libdbusmenu-gtk3
 
 ---
 install `appimagelauncher` to install appimage files. (I dont know how to remove the installed package)
+
 ---
 install `libdbusmenu-glib` if global menu is not working on vscode.
 install `plasma-applet-window-buttons` to make `Window Buttons` widget work.
-for making the vscode to remove extra top border right click on it and choose `More Actions` and select `No titlebar and frame`
+to remove window titlebar and frame add 
+```
+[Windows]
+BorderlessMaximizedWindows=true
+```
+to ~/.config/kwinrc
+
