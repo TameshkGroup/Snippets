@@ -46,3 +46,5 @@ sudo pacman -S appmenu-gtk-module libappindicator-gtk3 libdbusmenu-gtk3
 
 ---
 install `appimagelauncher` to install appimage files. (I dont know how to remove the installed package)
+---
+install `libdbusmenu-glib` if global menu is not working on vscode
