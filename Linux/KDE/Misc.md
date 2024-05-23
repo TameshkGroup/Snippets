@@ -3,10 +3,10 @@
 remove the following files:
 
 ```
-/home/seraj/.kde4
-/home/seraj/.local/share/plasma
-/home/seraj/.config/kdeglobals
-/home/seraj/.config/kwinrc
+/home/$USER/.kde4
+/home/$USER/.local/share/plasma
+/home/$USER/.config/kdeglobals
+/home/$USER/.config/kwinrc
 ```
 ### Missing video thumnail
 
