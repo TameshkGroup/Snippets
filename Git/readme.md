@@ -33,7 +33,7 @@ git rev-list --objects --all |
 ## Remove files from git history
 
 ```bash
-git filter-repo --invert-paths --path Post.Core.WebApi/certificate.xml --force
+git filter-repo --invert-paths --path <path> --force
 ```
 Then you need to push the new histroy into the repo
 
