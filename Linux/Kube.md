@@ -23,3 +23,8 @@ Then it warns:
 1. Update your `.kube/config`
 2. Connet to server with the new config 
 3. Restart these pods by simply deleting them.
+
+- if you want to update server kube config:
+  ```bash
+  cat /etc/kubernetes/admin.conf > $HOME/.kube/config
+  ```
