@@ -13,3 +13,13 @@ FLANNEL_SUBNET=10.244.0.1/24
 FLANNEL_MTU=1450
 FLANNEL_IPMASQ=true
 ```
+## Renew the certificates
+```bash
+kubeadm certs renew all
+```
+Then it warns:
+> Done renewing certificates. You must restart the kube-apiserver, kube-controller-manager, kube-scheduler and etcd, so that they can use the new certificates.
+
+1. Update your `.kube/config`
+2. Connet to server with the new config 
+3. Restart these pods by simply deleting them.
