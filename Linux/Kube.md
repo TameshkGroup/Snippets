@@ -28,3 +28,7 @@ Then it warns:
   ```bash
   cat /etc/kubernetes/admin.conf > $HOME/.kube/config
   ```
+
+## openlens extension to view logs
+
+`@alebcay/openlens-node-pod-menu`
